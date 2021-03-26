@@ -8,9 +8,10 @@ namespace ByteBank.Entities.Employees
 {
     class Employee
     {
+        public static int TotalEmployee { get; private set; }
         public string Name { get; set; }
-        public string CPF { get; set; }
-        public double Salary { get; set; }
+        protected string CPF { get; set; }
+        public double Salary { get; protected set; }
 
         
 
@@ -19,7 +20,7 @@ namespace ByteBank.Entities.Employees
             Name = name;
             CPF = cpf;
             Salary = salary;
-            
+            TotalEmployee++;
         }
 
         public virtual double GetBonification()
@@ -27,7 +28,10 @@ namespace ByteBank.Entities.Employees
             return Salary * 0.1;
         }
 
-
+        public virtual void PlusSalary()
+        {
+            Salary *= 1.1;
+        }
 
     }
 }

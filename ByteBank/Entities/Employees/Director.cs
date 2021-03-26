@@ -13,12 +13,16 @@ namespace ByteBank.Entities.Employees
             Name = name;
             CPF = cpf;
             Salary = salary;
-
         }
 
         public override double GetBonification()
         {
             return Salary + base.GetBonification();
+        }
+
+        public override void PlusSalary()
+        {
+            Salary *= 1.15;
         }
     }
 }
