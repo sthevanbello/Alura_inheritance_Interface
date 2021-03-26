@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Entities
 {
-    class BonificationManager
+    static class BonificationManager
     {
-        private double _totalBonification;
-        public void Register(Employee employee)
+        private static double _totalBonification;
+        public static void Register(Employee employee)
         {
             _totalBonification += employee.GetBonification();
         }
        
 
-        public double GetTotalBonification()
+        public static double GetTotalBonification()
         {
             return _totalBonification;
         }

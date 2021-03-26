@@ -8,34 +8,33 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-
-            Employee employee1 = new Employee(name: "Carlos", cpf: "229.845.028-14", salary: 2000);
-            Director director1 = new Director(name: "Roberta", cpf: "254.658.148-03", salary: 5000);
-
-            employee1.PlusSalary();
-
-            Console.WriteLine($"New salary of the {employee1.Name} = {employee1.Salary}");
-
-            director1.PlusSalary();
-
-            Console.WriteLine($"new salary of the {director1.Name} = {director1.Salary}");
-            BonificationManager bonificationManager = new BonificationManager();
-
-            bonificationManager.Register(employee1);
-            bonificationManager.Register(director1);
-
-            Console.WriteLine($"Employee: {employee1.Name}");
-            Console.WriteLine($"Bonification: {employee1.GetBonification()}");
-
-            Console.WriteLine($"\nDirector: {director1.Name}");
-            Console.WriteLine($"Bonification: {director1.GetBonification()}");
-
-            Console.WriteLine($"\nTotal of bonification: {bonificationManager.GetTotalBonification()}");
-
-            Console.WriteLine($"\nTotal employees: {Employee.TotalEmployee}\n");
-
+            CalculateBonification();
 
             Console.ReadKey();
+        }
+
+        public static void CalculateBonification()
+        {
+            // You cannot create an abstract class instance
+            // Employee employee = new Employee("", "", 500);
+
+            Designer pedro = new Designer(name: "Pedro", cpf: "833.222.048-39");
+
+            Director roberta = new Director(name: "Roberta", cpf: "159.753.398-04");
+
+            Auxiliary igor = new Auxiliary(name: "Igor", cpf: "981.198.778-53");
+
+            ManagerOfAccount camila = new ManagerOfAccount(name: "Camila", cpf: "326.985.628-89");
+
+            Developer guilherme = new Developer(name: "Guilherme", cpf: "228546789-54");
+
+            BonificationManager.Register(pedro);
+            BonificationManager.Register(roberta);
+            BonificationManager.Register(igor);
+            BonificationManager.Register(camila);
+            BonificationManager.Register(guilherme);
+
+            Console.WriteLine($"Total of bonification of this month: {BonificationManager.GetTotalBonification()}");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Entities.Employees
 {
-    class Employee
+    public abstract class Employee
     {
         public static int TotalEmployee { get; private set; }
         public string Name { get; set; }
@@ -23,15 +23,11 @@ namespace ByteBank.Entities.Employees
             TotalEmployee++;
         }
 
-        public virtual double GetBonification()
-        {
-            return Salary * 0.1;
-        }
+        public abstract double GetBonification();
 
-        public virtual void PlusSalary()
-        {
-            Salary *= 1.1;
-        }
+
+        public abstract void PlusSalary();
+        
 
     }
 }

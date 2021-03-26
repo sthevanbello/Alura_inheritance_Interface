@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Entities.Employees
 {
-    class Director : Employee
+    class ManagerOfAccount : Employee
     {
-        public Director(string name, string cpf) : base(name, cpf, 5000)
+        public ManagerOfAccount(string name, string cpf) : base(name, cpf, 4000)
         {
             Name = name;
             CPF = cpf;
         }
-
         public override double GetBonification()
         {
-            return Salary * 0.5;
+            return Salary * 0.25;
         }
 
         public override void PlusSalary()
         {
-            Salary *= 1.15;
+            Salary *= 1.05;
         }
     }
 }
