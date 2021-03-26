@@ -20,7 +20,7 @@ namespace ByteBank.Entities.Employees
 
         public override void PlusSalary()
         {
-            Salary *= 1.1;
+            Salary *= 1.15;
         }
     }
 }

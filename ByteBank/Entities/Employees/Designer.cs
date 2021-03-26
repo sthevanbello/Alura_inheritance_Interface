@@ -10,8 +10,7 @@ namespace ByteBank.Entities.Employees
     {
         public Designer(string name, string cpf) : base(name, cpf, 3000)
         {
-            Name = name;
-            CPF = cpf;
+            
         }
         public override double GetBonification()
         {

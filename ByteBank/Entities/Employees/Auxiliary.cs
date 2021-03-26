@@ -10,8 +10,7 @@ namespace ByteBank.Entities.Employees
     {
         public Auxiliary(string name, string cpf) : base(name, cpf, 2000)
         {
-            Name = name;
-            CPF = cpf;
+            
         }
 
         public override double GetBonification()
