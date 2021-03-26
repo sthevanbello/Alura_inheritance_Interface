@@ -14,10 +14,7 @@ namespace ByteBank.Entities
         {
             _totalBonification += employee.GetBonification();
         }
-        public void Register(Director director)
-        {
-            _totalBonification += director.GetBonification();
-        }
+       
 
         public double GetTotalBonification()
         {

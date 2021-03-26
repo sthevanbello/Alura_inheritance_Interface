@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Entities.Employees
 {
-    class Director
+    class Director : Employee
     {
-        public string Name { get; set; }
-        public string CPF { get; set; }
-        public double Salary { get; set; }
-
-
-        public Director(string name, string cpf, double salary)
+        public Director(string name, string cpf, double salary) : base(name, cpf, salary)
         {
             Name = name;
             CPF = cpf;
@@ -21,9 +16,9 @@ namespace ByteBank.Entities.Employees
 
         }
 
-        public double GetBonification()
+        public override double GetBonification()
         {
-            return Salary;
+            return Salary + base.GetBonification();
         }
     }
 }

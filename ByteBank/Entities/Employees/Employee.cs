@@ -12,23 +12,18 @@ namespace ByteBank.Entities.Employees
         public string CPF { get; set; }
         public double Salary { get; set; }
 
-        // The correct thing would be to use enumeration
-        private int _type;
+        
 
-        public Employee(string name, string cpf, double salary, int type)
+        public Employee(string name, string cpf, double salary)
         {
             Name = name;
             CPF = cpf;
             Salary = salary;
-            _type = type;
+            
         }
 
-        public double GetBonification()
+        public virtual double GetBonification()
         {
-            if (_type == 1)
-            {
-                return Salary;
-            }
             return Salary * 0.1;
         }
 

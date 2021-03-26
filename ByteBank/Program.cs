@@ -9,8 +9,8 @@ namespace ByteBank
         static void Main(string[] args)
         {
 
-            Employee employee1 = new Employee(name: "Carlos", cpf: "229.845.028-14", salary: 2000, type: 0);
-            Director director1 = new Director(name: "Roberta", cpf: "454.658.148-03", salary: 20000);
+            Employee employee1 = new Employee(name: "Carlos", cpf: "229.845.028-14", salary: 2000);
+            Director director1 = new Director(name: "Roberta", cpf: "254.658.148-03", salary: 5000);
 
             BonificationManager bonificationManager = new BonificationManager();
 
