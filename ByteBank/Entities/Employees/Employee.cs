@@ -28,6 +28,8 @@ namespace ByteBank.Entities.Employees
             TotalEmployee++;
         }
 
+        
+
         public abstract double GetBonification();
 
 
